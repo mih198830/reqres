@@ -7,7 +7,6 @@ import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 
-
 public class ReqresInTests {
     @Test
     void checkIfNumberOfPageEqualTwo(){
