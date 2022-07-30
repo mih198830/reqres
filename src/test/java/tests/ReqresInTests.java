@@ -9,6 +9,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static io.restassured.RestAssured.*;
 import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.is;
+import static specs.NumberOfPageTwoSpec.numberOfPagesRequestSpec;
+import static specs.NumberOfPageTwoSpec.numberOfPagesResponseSpec;
+import static specs.ResourceNotFoundCheckSpec.notFoundRequestSpec;
+import static specs.ResourceNotFoundCheckSpec.notFoundResponseSpec;
 import static specs.SuccessfulLoginSpec.loginRequestSpec;
 import static specs.SuccessfulLoginSpec.loginResponseSpec;
 import static specs.СheckPostCreateRequestNameCorrect.postCreateRequestSpec;
@@ -24,13 +28,12 @@ public class ReqresInTests {
     @Test
     void checkIfNumberOfPageEqualTwo(){
         given()
+                .spec(numberOfPagesRequestSpec)
                 .when()
-                .get("/api/users")
+                .get()
                 .then()
-                .log().body()
-                .log().status()
-                .body("total_pages", is(2))
-                .statusCode(200);
+                .spec(numberOfPagesResponseSpec)
+                .body("total_pages", is(2));
     }
 
     @Test
@@ -56,13 +59,13 @@ public class ReqresInTests {
     @Test
     void resourceNotFoundCheck(){
         given()
-                .contentType(JSON)
+                .spec(notFoundRequestSpec)
                 .when()
-                .get("/api/unknown/23")
+                .get()
                 .then()
+                .spec(notFoundResponseSpec)
                 .log().body()
-                .body(is("{}"))
-                .statusCode(404);
+                .body(is("{}"));
     }
 
     @Test
