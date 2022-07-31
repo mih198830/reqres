@@ -1,10 +1,11 @@
 package models.lombok;
+import io.qameta.allure.internal.shadowed.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 @Data
+@JsonIgnoreProperties("createdAt")
 public class ResponseCreateUserModel {
-    private String name = "morpheus";
-    private String job = "leader";
-    private String id = "492";
-    private String createdAt = "2022-07-30T11:09:05.642Z";
+    private String name;
+    private String job;
+    private String id;
 }

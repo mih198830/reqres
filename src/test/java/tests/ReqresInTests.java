@@ -1,13 +1,12 @@
 package tests;
 
-import io.restassured.RestAssured;
 import models.lombok.*;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import static io.restassured.RestAssured.baseURI;
+import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
-
-import static io.restassured.RestAssured.*;
-import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.is;
 import static specs.NumberOfPageTwoSpec.numberOfPagesRequestSpec;
 import static specs.NumberOfPageTwoSpec.numberOfPagesResponseSpec;
@@ -15,11 +14,12 @@ import static specs.ResourceNotFoundCheckSpec.notFoundRequestSpec;
 import static specs.ResourceNotFoundCheckSpec.notFoundResponseSpec;
 import static specs.SuccessfulLoginSpec.loginRequestSpec;
 import static specs.SuccessfulLoginSpec.loginResponseSpec;
+import static specs.SuccessfulRegistrationSpec.postRegistrationSuccessRequestSpec;
+import static specs.SuccessfulRegistrationSpec.postRegistrationSuccessResponseSpec;
 import static specs.СheckPostCreateRequestNameCorrect.postCreateRequestSpec;
 import static specs.СheckPostCreateRequestNameCorrect.postCreateResponseSpec;
 
 public class ReqresInTests {
-
     @BeforeAll
     static void setup() {
         baseURI = "https://reqres.in";
@@ -70,30 +70,29 @@ public class ReqresInTests {
 
     @Test
     void successfulRegistration(){
-        RequestSuccessfullRegistrationModel body = new RequestSuccessfullRegistrationModel();
+        LoginRegistrationModel body = new LoginRegistrationModel();
         body.setEmail("eve.holt@reqres.in");
         body.setPassword("pistol");
 
-        ResponseSuccessfullRegistrationModel response =
+        TokenModel response =
         given()
-                .spec(loginRequestSpec)
-                .contentType(JSON)
+                .spec(postRegistrationSuccessRequestSpec)
                 .body(body)
                 .when()
                 .post()
                 .then()
-                .spec(loginResponseSpec)
-                .extract().as(ResponseSuccessfullRegistrationModel.class);
+                .spec(postRegistrationSuccessResponseSpec)
+                .extract().as(TokenModel.class);
         assertThat(response.getToken()).isEqualTo("QpwL5tke4Pnpja7X4");
     }
 
     @Test
     void apiRegisterTestTokenExist() {
-        RequestSuccessfulLoginModel body = new RequestSuccessfulLoginModel();
+        LoginRegistrationModel body = new LoginRegistrationModel();
         body.setEmail("eve.holt@reqres.in");
         body.setPassword("cityslicka");
 
-        ResponseSuccessfulLoginModel response =
+        TokenModel response =
             given()
                     .spec(loginRequestSpec)
                     .body(body)
@@ -101,7 +100,20 @@ public class ReqresInTests {
                     .post()
                     .then()
                     .spec(loginResponseSpec)
-                    .extract().as(ResponseSuccessfulLoginModel.class);
+                    .extract().as(TokenModel.class);
                     assertThat(response.getToken()).isEqualTo("QpwL5tke4Pnpja7X4");
+        }
+
+        @Test
+        @Disabled
+        void nameGeorgeExistAmongUsers() {
+            UsersCheck response =
+            given().
+                    spec(postCreateRequestSpec)
+                    .when()
+                    .get()
+                    .then()
+                    .extract().as(UsersCheck.class);
+                    assertThat(response.getFirstName()).isEqualTo("George");
         }
 }

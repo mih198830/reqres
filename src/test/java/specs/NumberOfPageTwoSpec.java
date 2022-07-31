@@ -4,6 +4,7 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
+import static helpers.CustomApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.with;
 import static io.restassured.http.ContentType.JSON;
 import static org.hamcrest.Matchers.notNullValue;
@@ -11,6 +12,7 @@ import static org.hamcrest.Matchers.notNullValue;
 public class NumberOfPageTwoSpec {
     public static RequestSpecification numberOfPagesRequestSpec = with()
             .basePath("/api/login")
+            .filter(withCustomTemplates())
             .log().uri()
             .log().body()
             .contentType(JSON);
