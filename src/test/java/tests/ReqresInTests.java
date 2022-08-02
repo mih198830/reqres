@@ -103,17 +103,4 @@ public class ReqresInTests {
                     .extract().as(TokenModel.class);
                     assertThat(response.getToken()).isEqualTo("QpwL5tke4Pnpja7X4");
         }
-
-        @Test
-        @Disabled
-        void nameGeorgeExistAmongUsers() {
-            UsersCheck response =
-            given().
-                    spec(postCreateRequestSpec)
-                    .when()
-                    .get()
-                    .then()
-                    .extract().as(UsersCheck.class);
-                    assertThat(response.getFirstName()).isEqualTo("George");
-        }
 }
