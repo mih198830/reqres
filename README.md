@@ -29,12 +29,7 @@ gradle clean test
 Jenkins is an automation server which lets us run tests
 
 Click <a target="_blank" href="https://jenkins.autotests.cloud/job/ReqresWebSite/">here</a> to see the job for Reqres
-
-<p align="center">
-
-![2022-08-28_20h36_33](https://user-images.githubusercontent.com/61227126/187084801-ef1da99d-d9b8-496a-a493-a5f599c8a866.png)
-</p>
-
+![2022-08-28_20h43_58](https://user-images.githubusercontent.com/61227126/187085110-9508cd64-b620-4b72-b9ac-46fadd260812.png)
 
 ## Allure report
 Allure Framework is a flexible test report tool that shows a concise representation of what have been tested in a neat web report form
