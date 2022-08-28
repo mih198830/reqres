@@ -1,9 +1,12 @@
 package tests;
 
-import models.lombok.*;
+import models.lombok.LoginRegistrationModel;
+import models.lombok.RequestCreateUserModel;
+import models.lombok.ResponseCreateUserModel;
+import models.lombok.TokenModel;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
