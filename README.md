@@ -29,10 +29,10 @@ gradle clean test
 ## Jenkins job
 Jenkins is an automation server which lets us run tests
 
-Click <a target="_blank" href="https://jenkins.autotests.cloud/job/10-anastasiachemko-project-wildberries">here</a> to see the job for Reqres
+Click <a target="_blank" href="https://jenkins.autotests.cloud/job/ReqresWebSite/">here</a> to see the job for Reqres
 
 <p align="center">
-<img title="Jenkins job" src="images/screens/jenkinsScreen.png">
+<img title="Jenkins job" ![2022-08-28_20h36_33](https://user-images.githubusercontent.com/61227126/187084801-ef1da99d-d9b8-496a-a493-a5f599c8a866.png)">
 </p>
 
 
