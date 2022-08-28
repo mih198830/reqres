@@ -50,5 +50,3 @@ Here are test suites and graphs:
 <p align="center">
 <img title="Allure graphs" src="images/screens/allureGraphs.png">
 </p>
-
-
