@@ -39,14 +39,9 @@ Click <a target="_blank" href="https://jenkins.autotests.cloud/job/ReqresWebSite
 ## Allure report
 Allure Framework is a flexible test report tool that shows a concise representation of what have been tested in a neat web report form
 
-Click <a target="_blank" href="https://jenkins.autotests.cloud/job/10-anastasiachemko-project-reqres-apiTests/1/allure/#">here</a> to see the report of the tests
+Click <a target="_blank" href="https://jenkins.autotests.cloud/job/ReqresWebSite/2/allure//#">here</a> to see the report of the tests
 
 Here are test suites and graphs:
+![2022-08-28_20h40_38](https://user-images.githubusercontent.com/61227126/187084951-a0e45809-fb9c-4921-83d8-2142ac2701cd.png)
 
-<p align="center">
-<img title="Allure suites" src="images/screens/allureSuites.png">
-</p>
-
-<p align="center">
-<img title="Allure graphs" src="images/screens/allureGraphs.png">
-</p>
+![2022-08-28_20h41_07](https://user-images.githubusercontent.com/61227126/187084975-c4f7c914-72e8-44d8-b286-b116adbc2273.png)
