@@ -40,3 +40,5 @@ Here are test suites and graphs:
 ![2022-08-28_20h40_38](https://user-images.githubusercontent.com/61227126/187084951-a0e45809-fb9c-4921-83d8-2142ac2701cd.png)
 
 ![2022-08-28_20h41_07](https://user-images.githubusercontent.com/61227126/187084975-c4f7c914-72e8-44d8-b286-b116adbc2273.png)
+
+:arrow_up: [Go up](#lift)
