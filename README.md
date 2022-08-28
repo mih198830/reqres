@@ -18,7 +18,6 @@ Click [here](https://reqres.in/) to take a look at the website!
 - RestAssured library
 - Specifications
 - Lombok models
-- Request log custom templates
 
 ## To run tests locally use:
 
