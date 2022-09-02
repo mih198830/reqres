@@ -29,6 +29,7 @@ gradle clean test
 Jenkins is an automation server which lets us run tests
 
 Click <a target="_blank" href="https://jenkins.autotests.cloud/job/ReqresWebSite/">here</a> to see the job for Reqres
+
 ![2022-08-28_20h43_58](https://user-images.githubusercontent.com/61227126/187085110-9508cd64-b620-4b72-b9ac-46fadd260812.png)
 
 ## Allure report
