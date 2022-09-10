@@ -24,6 +24,8 @@ Click [here](https://reqres.in/) to take a look at the website!
 ```
 gradle clean test 
 ```
+![2022-09-10_22h13_24](https://user-images.githubusercontent.com/61227126/189496385-c0802b15-cbdf-4bac-a3f9-6872fee0dcdb.png)
+
 
 ## Jenkins job
 Jenkins is an automation server which lets us run tests
