@@ -29,7 +29,7 @@ public class ReqresInTests {
     }
 
     @Test
-    void checkIfNumberOfPageEqualTwo(){
+    void checkIfNumberOfPageEqualTwo() {
         given()
                 .spec(numberOfPagesRequestSpec)
                 .when()
@@ -40,7 +40,7 @@ public class ReqresInTests {
     }
 
     @Test
-    void checkPostCreateRequestNameCorrect(){
+    void checkPostCreateRequestNameCorrect() {
         RequestCreateUserModel body = new RequestCreateUserModel();
         body.setName("morpheus");
         body.setJob("leader");
@@ -49,10 +49,10 @@ public class ReqresInTests {
                 (ResponseCreateUserModel)
                         given()
                                 .spec(postCreateRequestSpec)
-                .body(body)
-                .when()
-                .post()
-                .then()
+                                .body(body)
+                                .when()
+                                .post()
+                                .then()
                                 .spec(postCreateResponseSpec)
                                 .extract().as(ResponseCreateUserModel.class);
         assertThat(response.getName()).isEqualTo("morpheus");
@@ -60,7 +60,7 @@ public class ReqresInTests {
     }
 
     @Test
-    void resourceNotFoundCheck(){
+    void resourceNotFoundCheck() {
         given()
                 .spec(notFoundRequestSpec)
                 .when()
@@ -72,20 +72,20 @@ public class ReqresInTests {
     }
 
     @Test
-    void successfulRegistration(){
+    void successfulRegistration() {
         LoginRegistrationModel body = new LoginRegistrationModel();
         body.setEmail("eve.holt@reqres.in");
         body.setPassword("pistol");
 
         TokenModel response =
-        given()
-                .spec(postRegistrationSuccessRequestSpec)
-                .body(body)
-                .when()
-                .post()
-                .then()
-                .spec(postRegistrationSuccessResponseSpec)
-                .extract().as(TokenModel.class);
+                given()
+                        .spec(postRegistrationSuccessRequestSpec)
+                        .body(body)
+                        .when()
+                        .post()
+                        .then()
+                        .spec(postRegistrationSuccessResponseSpec)
+                        .extract().as(TokenModel.class);
         assertThat(response.getToken()).isEqualTo("QpwL5tke4Pnpja7X4");
     }
 
@@ -96,14 +96,14 @@ public class ReqresInTests {
         body.setPassword("cityslicka");
 
         TokenModel response =
-            given()
-                    .spec(loginRequestSpec)
-                    .body(body)
-                    .when()
-                    .post()
-                    .then()
-                    .spec(loginResponseSpec)
-                    .extract().as(TokenModel.class);
-                    assertThat(response.getToken()).isEqualTo("QpwL5tke4Pnpja7X4");
-        }
+                given()
+                        .spec(loginRequestSpec)
+                        .body(body)
+                        .when()
+                        .post()
+                        .then()
+                        .spec(loginResponseSpec)
+                        .extract().as(TokenModel.class);
+        assertThat(response.getToken()).isEqualTo("QpwL5tke4Pnpja7X4");
+    }
 }
