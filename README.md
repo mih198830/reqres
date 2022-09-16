@@ -32,7 +32,8 @@ Jenkins is an automation server which lets us run tests
 
 Click <a target="_blank" href="https://jenkins.autotests.cloud/job/ReqresWebSite/">here</a> to see the job for Reqres
 
-![](../../Pictures/Screenpresso/2022-09-16_11h42_36.png)
+![2022-09-16_11h42_36](https://user-images.githubusercontent.com/61227126/190585118-e8ce73be-14ba-4300-b349-0d1a7b0adbc6.png)
+
 
 ## Allure report
 Allure Framework is a flexible test report tool that shows a concise representation of what have been tested in a neat web report form
