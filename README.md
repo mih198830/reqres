@@ -4,13 +4,13 @@ Click [here](https://reqres.in/) to take a look at the website!
 ## Technology Stack used in the project:
 
 <p align="center">
-<a href="https://www.java.com/"><img src="images/logo/Java.svg" width="50" height="50"  alt="Java" title="Java"/></a>
-<a href="https://gradle.org/"><img src="images/logo/Gradle.svg" width="50" height="50"  alt="Gradle" title="Gradle"/></a>
-<a href="https://junit.org/junit5/"><img src="images/logo/Junit5.svg" width="50" height="50"  alt="JUnit 5" title="JUnit 5"/></a>
-<a href="https://selenide.org/"><img src="images/logo/Selenide.svg" width="50" height="50"  alt="Selenide" title="Selenide"/></a>
-<a href="https://gradle.org/"><img src="images/logo/rest-assured-logo.svg" width="50" height="50"  alt="Gradle" title="RestAssured"/></a>
-<a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins" title="Jenkins"/></a>
-<a href="https://github.com/allure-framework/allure2"><img src="images/logo/Allure.svg" width="50" height="50"  alt="Allure" title="Allure"/></a>
+<a href="https://www.java.com/"><img src="src/images/logo/Java.svg" width="50" height="50"  alt="Java" title="Java"/></a>
+<a href="https://gradle.org/"><img src="src/images/logo/Gradle.svg" width="50" height="50"  alt="Gradle" title="Gradle"/></a>
+<a href="https://junit.org/junit5/"><img src="src/images/logo/Junit5.svg" width="50" height="50"  alt="JUnit 5" title="JUnit 5"/></a>
+<a href="https://selenide.org/"><img src="src/images/logo/Selenide.svg" width="50" height="50"  alt="Selenide" title="Selenide"/></a>
+<a href="https://gradle.org/"><img src="src/images/logo/rest-assured-logo.svg" width="50" height="50"  alt="Gradle" title="RestAssured"/></a>
+<a href="https://www.jenkins.io/"><img src="src/images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins" title="Jenkins"/></a>
+<a href="https://github.com/allure-framework/allure2"><img src="src/images/logo/Allure.svg" width="50" height="50"  alt="Allure" title="Allure"/></a>
 
 
 ## What is special about this project:
@@ -24,11 +24,14 @@ Click [here](https://reqres.in/) to take a look at the website!
 ```
 gradle clean test 
 ```
+![2022-09-10_22h13_24](https://user-images.githubusercontent.com/61227126/189496385-c0802b15-cbdf-4bac-a3f9-6872fee0dcdb.png)
+
 
 ## Jenkins job
 Jenkins is an automation server which lets us run tests
 
 Click <a target="_blank" href="https://jenkins.autotests.cloud/job/ReqresWebSite/">here</a> to see the job for Reqres
+
 ![2022-08-28_20h43_58](https://user-images.githubusercontent.com/61227126/187085110-9508cd64-b620-4b72-b9ac-46fadd260812.png)
 
 ## Allure report
